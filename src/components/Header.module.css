@@ -1,0 +1,23 @@
+.header {
+    background-color: var(--gray-800);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+
+    
+}
+
+.header h1 {
+    transition: color 0.2s;
+}
+
+.header h1:hover {
+    color: var(--green-500);
+}
+
+.header img {
+    height: 3.2rem;
+}

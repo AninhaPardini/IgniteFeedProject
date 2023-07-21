@@ -1,0 +1,127 @@
+.post {
+    background-color: var(--gray-800);
+    border-radius: 8px;
+    padding: 2rem;
+
+    font-size: 1.6rem;
+}
+
+.post + .post {
+    margin-top: 2rem;
+}
+
+.post > header { /* header do post */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post > header time {
+    font-size: 1.4rem;
+    color: var(--gray-400);
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    font-size: 1.4rem;
+}
+
+.content {
+    line-height: 1.6;
+    font-size: 1.4rem;
+
+    color: var(--gray-300);
+    margin-top: 2.4rem;
+}
+
+.content p {
+    margin: 1.6rem 0;
+}
+
+.content a {
+    color: var(--green-500);
+    font-weight: bold;
+    text-decoration: none;
+
+    transition: color 0.1s;
+}
+
+.content a:hover {
+    color: var(--green-300);
+}
+
+.line {
+    height: 1px;
+    border: 0;
+    background-color: var(--gray-600);
+    margin: 2.4rem 0;
+}
+
+.commentForm {
+    width: 100%;
+    margin-top: 2.4rem;
+    
+
+}
+
+.commentForm > strong {
+    line-height: 1.6;
+    color: var(--gray-100);
+}
+
+.commentInput {
+    background-color: var(--gray-900);
+
+    width: 100%;
+    height: 9.6rem;
+
+    padding: 1.6rem;
+    margin-top: 1.6rem;
+    resize: none;
+
+    font-size: 1.6rem;
+    color: var(--gray-100);
+    line-height: 1.4;
+
+    border-radius: 8px;
+    border: transparent;
+}
+
+.commentInput:focus {
+    outline: 2px solid var(--green-500);
+}
+
+.commentForm footer {
+    visibility: hidden;
+    max-height: 0;
+}
+
+.commentForm:focus-within footer { /* se houver algum foco no commentForm ele irá aplicar esse estilo abaixo: */
+    visibility: visible;
+    max-height: 20rem;
+}
+
+.commentButton[type="submit"] {
+    background-color: var(--green-500);
+    color: var(--white);
+
+    padding: 1.6rem 2.4rem;
+
+    border-radius: 8px;
+    border: transparent;
+
+    font-size: 1.6rem;
+    font-weight: bold;
+
+    margin-top: 1.6rem;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s;
+}
+
+.commentButton[type="submit"]:hover {
+    background-color: var(--green-300);
+}
