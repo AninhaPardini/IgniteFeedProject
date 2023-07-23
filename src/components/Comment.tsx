@@ -7,11 +7,11 @@ import Avatar from './Avatar';
 interface CommentProps {
   authorImage: string,
   author: string,
-  time: string,
+  publishedAt: string,
   content: React.ReactNode, // quando é uma propriedade que recebe um componente, é necessário usar React.ReactNode
 }
 
-const Comment: React.FC<CommentProps> = ({ authorImage, author, content, time }) => {
+const Comment: React.FC<CommentProps> = ({ authorImage, author, content, publishedAt }) => {
     return (
         <div className={styles.comment}>
             <Avatar hasBorder={false} authorImage={authorImage}/>
@@ -21,7 +21,7 @@ const Comment: React.FC<CommentProps> = ({ authorImage, author, content, time })
                     <header>
                         <div className={styles.authorAndTime}>
                             <strong>{author}</strong>
-                            <time title="21 de julho às 11:20" dateTime='2022-05-11 11:16:30'>{time}</time>
+                            <time title="21 de julho às 11:20" dateTime='2022-05-11 11:16:30'>{publishedAt}</time>
                         </div>
                         
                         <button title='Deletar comentário'>
